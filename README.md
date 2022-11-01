@@ -21,6 +21,16 @@ Local-Build + Run:
 3. run container: ```docker run --name test -p 8080:8080 road-to-cloud-native:1.0.0```
 4. open browser: ```http://localhost:8081/v1/weather?location=Nürnberg```
 
+## AWS-EC2-Deployment (TODO)
+1. Local-Build + Push-Build to remote Image-Registry:
+   1. build jar: ```mvn clean install```
+   2. build docker-image: ```docker build -t road-to-cloud-native:1.0.0 . --platform linux/x86_64 ```
+   3. tag image: ```docker tag road-to-cloud-native:1.0.0 ghcr.io/procceed-it/road-to-cloud-native:1.0.0```
+   4. push image: ```docker push ghcr.io/procceed-it/road-to-cloud-native:1.0.0```
+2. Start EC2-Instance with Docker
+3. Deploy Dockerimage in EC2-Instance
+
+
 ## Local K8s-Minikube-Deployment
 Voraussetzungen:
 - lokale Minikube-Installation ```https://minikube.sigs.k8s.io/docs/start/```

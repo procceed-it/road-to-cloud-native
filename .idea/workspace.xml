@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d0de43-66ea-4ec1-b322-b60334425d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-standard/deployment.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-standard/ingress.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-standard/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
