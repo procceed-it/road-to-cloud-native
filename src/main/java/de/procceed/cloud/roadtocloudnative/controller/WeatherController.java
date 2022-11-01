@@ -1,5 +1,7 @@
 package de.procceed.cloud.roadtocloudnative.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +13,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value="v1/weather")
 public class WeatherController {
+
+    @Autowired
+    private Environment env;
 
     Map<String, Double> weatherData = Map.of(
             "Nürnberg", 24.0,
@@ -24,9 +29,9 @@ public class WeatherController {
         String location = optLocation.orElse(defaultLocation);
 
         if (weatherData.containsKey(location)) {
-            return weatherData.get(location).toString();
+            return "HOSTNAME: " + env.getProperty("hostname") + " - Message: " + weatherData.get(location).toString();
         } else {
-            return "No weather data available for location: " + location;
+            return "HOSTNAME: " + env.getProperty("hostname") + " - Message: No weather data available for location: " + location;
         }
     }
 }
