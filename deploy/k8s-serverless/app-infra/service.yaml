@@ -1,0 +1,23 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: weather-app
+  namespace: weather-serverless
+  labels:
+    app: weather-knative
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/target: "1"
+        autoscaling.knative.dev/metric: "rps"
+        autoscaling.knative.dev/max-scale: "3"
+        autoscaling.knative.dev/window: "6s"
+        autoscaling.knative.dev/target-utilization-percentage: "100"
+    spec:
+      containers:
+        - image: joergfa/weather-app:1.0.0
+          env:
+            - name: TARGET
+              value: "Spring Boot Sample v1"
+         # imagePullPolicy: Never
