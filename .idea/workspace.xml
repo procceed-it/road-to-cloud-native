@@ -5,24 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8d0de43-66ea-4ec1-b322-b60334425d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/appk8sserverless.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appk8sstandard.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-serverless/app-infra/service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-serverless/cluster-infra/config-autoscaler.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy/k8s-serverless/cluster-infra/config-domain.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/init-k8s-knative.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/WeatherData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/k8s-standard/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/k8s-standard/app-infra/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/k8s-standard/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/k8s-standard/app-infra/ingress.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/k8s-standard/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/k8s-standard/app-infra/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init-k8s-standard.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appk8sserverless.sh" beforeDir="false" afterPath="$PROJECT_DIR$/appk8sserverless.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/k8s-serverless/app-infra/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/k8s-serverless/app-infra/service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init-k8s-knative.sh" beforeDir="false" afterPath="$PROJECT_DIR$/init-k8s-knative.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,9 +55,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/deploy/k8s-standard/app-infra" />
       <recent name="$PROJECT_DIR$/deploy/k8s-knative-serving/app-infra" />
@@ -73,7 +78,7 @@
       <module name="road-to-cloud-native" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.procceed.cloud.roadtocloudnative.*" />
+          <option name="PATTERN" value="de.procceed.cloud.roadtocloudnative.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

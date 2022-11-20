@@ -21,6 +21,3 @@ kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1
 kubectl apply -f https://github.com/knative/net-istio/releases/download/knative-v1.8.0/net-istio.yaml
 
 kubectl apply -f deploy/k8s-serverless/cluster-infra/
-
-# port-forward to istio-ingress
-kubectl port-forward pod/"$(kubectl get pod -l app=istio-ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}')" -n istio-system 8085:8080

@@ -1,18 +1,20 @@
 package de.procceed.cloud.roadtocloudnative.controller;
 
+import de.procceed.cloud.roadtocloudnative.model.WeatherData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 import java.util.Optional;
 
-@RestController
+@Controller
 public class WeatherController {
+    private final String defaultLocation = "Nürberg";
 
     @Autowired
     private Environment env;
@@ -20,22 +22,27 @@ public class WeatherController {
     @Value("${TARGET:World}")
     String target;
 
-    Map<String, Double> weatherData = Map.of(
-            "Nürnberg", 24.0,
-            "Fürth", 10.0
+    Map<String, WeatherData> weatherDataMap = Map.of(
+            "Nürnberg", new WeatherData(25.0, "cloudless"),
+            "Fürth", new WeatherData(-5.3, "rainy")
     );
 
     @GetMapping("v1/weather")
-    public String getWeather(@RequestParam(name = "location") Optional<String> optLocation) {
-        String defaultLocation = "Nürnberg";
+    public String getWeather(Model model, @RequestParam(name = "location") Optional<String> optLocation) {
 
         String location = optLocation.orElse(defaultLocation);
 
-        if (weatherData.containsKey(location)) {
-            return "HOSTNAME: " + env.getProperty("hostname") + " - Message: " + weatherData.get(location).toString();
+        if (weatherDataMap.containsKey(location)) {
+            model.addAttribute("weatherDataAvailable", true);
+            model.addAttribute("weatherData", weatherDataMap.get(location));
         } else {
-            return "HOSTNAME: " + env.getProperty("hostname") + " - Message: No weather data available for location: " + location;
+            model.addAttribute("weatherDataAvailable", false);
         }
+
+        model.addAttribute("location", location);
+        model.addAttribute("hostname", env.getProperty("hostname"));
+
+        return "main";
     }
 
     @GetMapping("/")
