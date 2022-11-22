@@ -7,6 +7,8 @@ Steps:
 1. ```mvn clean package && mvn exec:java```
 2. open browser: ```http://localhost:8080/v1/weather?location=Nürnberg```
 
+![Alt](context.drawio.svg)
+
 ## Local-Docker-Deployment
 Preconditions:
 - mvn: ```https://maven.apache.org/install.html```
@@ -26,6 +28,10 @@ Preconditions (for Quick-Start):
 - Docker: ```https://docs.docker.com/desktop/install/mac-install/```
 - AWS account
 - Docker-Registry Account (e.g. github, dockerhub)
+
+Final-Postconditions (for saving money)
+- terminate ec2-instances
+- delete application load balancer
 
 Steps:
 1. Local-Build + Push-Build to remote Image-Registry:
