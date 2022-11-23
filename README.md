@@ -7,7 +7,7 @@ Steps:
 1. ```mvn clean package && mvn exec:java```
 2. open browser: ```http://localhost:8080/v1/weather?location=Nürnberg```
 
-![Alt](context.drawio.svg)
+![Alt](documentation.local-jar.drawio.svg)
 
 ## Local-Docker-Deployment
 Preconditions:
