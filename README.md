@@ -1,41 +1,44 @@
 ## Local-jar-Deployment
-Preconditions:
+### Outline
+![Alt](documentation/local-jar.drawio.svg)
+
+### Preconditions
 - mvn: ```https://maven.apache.org/install.html```
 - java-runtime: ```https://www.oracle.com/java/technologies/downloads/```
 
-Steps:
+### Steps
 1. ```mvn clean package && mvn exec:java```
 2. open browser: ```http://localhost:8080/v1/weather?location=Nürnberg```
 
-![Alt](documentation/local-jar.drawio.svg)
+
 
 ## Local-Docker-Deployment
-Preconditions:
+### Outline
+![Alt](documentation/local-docker.drawio.svg)
+
+### Preconditions
 - mvn: ```https://maven.apache.org/install.html```
 - java-runtime: ```https://www.oracle.com/java/technologies/downloads/```
 - Docker: ```https://docs.docker.com/desktop/install/mac-install/```
 
-Steps:
+### Steps
 1. build jar: ```mvn clean install```
 2. build docker-image: ```docker build -t road-to-cloud-native:1.0.0 . --platform linux/x86_64 ```
 3. run container: ```docker run --name test -p 8081:8080 road-to-cloud-native:1.0.0```
 4. open browser: ```http://localhost:8081/v1/weather?location=Nürnberg```
 
-![Alt](documentation/local-docker.drawio.svg)
-
 ## AWS-EC2-Deployment
-Preconditions (for Quick-Start):
+### Outline
+![Alt](documentation/aws-docker-ec2.drawio.svg)
+
+### Preconditions (for Quick-Start)
 - mvn: ```https://maven.apache.org/install.html```
 - java-runtime: ```https://www.oracle.com/java/technologies/downloads/```
 - Docker: ```https://docs.docker.com/desktop/install/mac-install/```
 - AWS account
 - Docker-Registry Account (e.g. github, dockerhub)
 
-Final-Postconditions (for saving money)
-- terminate ec2-instances
-- delete application load balancer
-
-Steps:
+### Steps
 1. Local-Build + Push-Build to remote Image-Registry:
     1. build jar: ```mvn clean install```
     2. build docker-image: ```docker build -t road-to-cloud-native:1.0.0 . --platform linux/x86_64 ```
@@ -63,8 +66,15 @@ Steps:
 3. Note Loadbalancer´s DNS name
 4. open browser: ```http://<LB-DNS-NAME>/v1/weather?location=Nürnberg```
 
+### Cleanup (for saving money)
+- terminate ec2-instances
+- delete application load balancer
+
 ## Local K8s-Minikube-Deployments
-Preconditions:
+### Outline
+![Alt](documentation/local-k8s-minikube.drawio.svg)
+
+### Preconditions
 - locale Minikube-Installation ```https://minikube.sigs.k8s.io/docs/start/```
 - set Istio-Download/PATH ```https://istio.io/latest/docs/setup/getting-started/``` -> "Download Istio"
 - Entries in ```etc/hosts``` (Mac/Linux)
@@ -73,14 +83,14 @@ Preconditions:
 - Start Minikube-Cluster with Istio/Knative:
   - ```sh init-k8s-knative.sh```
 
-### K8s-Stufe 1: Standard-Deployment - typical Spring-Boot Applikation
-Steps:
+### K8s-option 1: Standard-Deployment - typical Spring-Boot Applikation
+#### Steps:
 1. ```sh appk8sstandard.sh```
 2. wait a second
 3. open browser: ```http://weather.com:8082/v1/weather?location=N%C3%BCrnberg```
 
-### K8s-Stufe 2: Serverless-Deployment - typical Spring-Boot Applikation
-Steps:
+### K8s-option 2: Serverless-Deployment - typical Spring-Boot Applikation
+#### Steps:
 1. adapt appk8sserverless.sh script to your imagename: ```<dockerRegistry>/<dockerRegistryAccountName>/road-to-cloud-native:1.0.0```
 2. adapt ```./deploy/k8s-serverless/app-infra-service.yaml``` ->  ```image: <dockerRegistry>/<dockerRegistryAccountName>/road-to-cloud-native:1.0.0```
 3. ```sh appk8sserverless.sh```
