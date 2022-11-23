@@ -1,3 +1,16 @@
+# Best-Weather Architecture
+## current state
+![Alt](documentation/arch-goal1.drawio.svg)
+
+
+## next goals
+### use external weather-data service
+![Alt](documentation/arch-goal2.drawio.svg)
+
+### persistent and cache weather-data
+![Alt](documentation/arch-goal3.drawio.svg)
+
+# Deployment-Types
 ## Local-jar-Deployment
 ### Outline
 ![Alt](documentation/local-jar.drawio.svg)
