@@ -7,7 +7,7 @@ Steps:
 1. ```mvn clean package && mvn exec:java```
 2. open browser: ```http://localhost:8080/v1/weather?location=Nürnberg```
 
-![Alt](documentation.local-jar.drawio.svg)
+![Alt](documentation/local-jar.drawio.svg)
 
 ## Local-Docker-Deployment
 Preconditions:
@@ -20,6 +20,8 @@ Steps:
 2. build docker-image: ```docker build -t road-to-cloud-native:1.0.0 . --platform linux/x86_64 ```
 3. run container: ```docker run --name test -p 8081:8080 road-to-cloud-native:1.0.0```
 4. open browser: ```http://localhost:8081/v1/weather?location=Nürnberg```
+
+![Alt](documentation/local-docker.drawio.svg)
 
 ## AWS-EC2-Deployment
 Preconditions (for Quick-Start):
