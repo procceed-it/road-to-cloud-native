@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>kubectl credentials</title>
+        <script src="script.js" type="text/javascript"/></script>
+    </head>
+
+    <body>
+        <h1>Best Weather</h1>
+        <div th:if="${weatherDataAvailable}">
+            <p>
+                Today´s weather in
+                <span th:text="${location}"></span>
+                is
+                <span th:text="${weatherData.degree}"></span>
+                degree and
+                <span th:text="${weatherData.state}"></span>
+            </p>
+        </div>
+        <div th:unless="${weatherDataAvailable}">
+            <p>
+                No results for <span th:text="${location}"></span>
+            </p>
+        </div>
+    </body>
+</html>
