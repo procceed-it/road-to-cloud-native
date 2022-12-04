@@ -2,7 +2,6 @@ package de.procceed.cloud.roadtocloudnative.controller;
 
 import de.procceed.cloud.roadtocloudnative.model.WeatherData;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,9 +17,6 @@ public class WeatherController {
 
     @Autowired
     private Environment env;
-
-    @Value("${TARGET:World}")
-    String target;
 
     Map<String, WeatherData> weatherDataMap = Map.of(
             "Nürnberg", new WeatherData(25.0, "cloudless"),
@@ -44,10 +40,4 @@ public class WeatherController {
 
         return "main";
     }
-
-    @GetMapping("/")
-    String hello() {
-        return "Hello " + target + "!";
-    }
-
 }

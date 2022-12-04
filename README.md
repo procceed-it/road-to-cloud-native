@@ -105,10 +105,9 @@
 ### K8s-option 2: Serverless-Deployment - typical Spring-Boot Applikation
 #### Steps:
 1. adapt appk8sserverless.sh script to your imagename: ```<dockerRegistry>/<dockerRegistryAccountName>/road-to-cloud-native:1.0.0```
-2. adapt ```./deploy/k8s-serverless/app-infra-service.yaml``` ->  ```image: <dockerRegistry>/<dockerRegistryAccountName>/road-to-cloud-native:1.0.0```
-3. ```sh appk8sserverless.sh```
-4. wait a second
-5. open browser: ```http://weather-app.weather-serverless.weather-knative.com:8085/v1/weather?location=N%C3%BCrnberg```
+2. ```sh appk8sserverless.sh```
+3. wait a second
+4. open browser: ```http://weather-app.weather-serverless.weather-knative.com:8085/v1/weather?location=N%C3%BCrnberg```
 
 Tools for analysis:
 - Minikube Dashboard: ```minikube dashboard```

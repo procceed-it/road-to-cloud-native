@@ -24,8 +24,4 @@ public class WeatherData {
     public void setDegree(double degree) {
         this.degree = degree;
     }
-
-
-
-
 }

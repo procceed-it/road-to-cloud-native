@@ -9,5 +9,4 @@ public class RoadToCloudNativeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RoadToCloudNativeApplication.class, args);
 	}
-
 }

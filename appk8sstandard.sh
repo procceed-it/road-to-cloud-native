@@ -4,7 +4,6 @@ mvn clean install
 
 docker build -t weather-app:1.0.0 .
 
-kubectl create namespace weather-k8s-standard
 kubectl delete -f ./deploy/k8s-standard/app-infra
 kubectl apply -f ./deploy/k8s-standard/app-infra
 
