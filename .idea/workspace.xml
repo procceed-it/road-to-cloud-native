@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8d0de43-66ea-4ec1-b322-b60334425d72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/Weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/WeatherData2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/WeatherData2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather-result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
