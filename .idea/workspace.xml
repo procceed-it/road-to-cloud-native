@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8d0de43-66ea-4ec1-b322-b60334425d72" name="Changes" comment="" />
+    <list default="true" id="f8d0de43-66ea-4ec1-b322-b60334425d72" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/controller/WeatherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/Weather.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/Weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/WeatherData2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/procceed/cloud/roadtocloudnative/model/WeatherData2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather-result.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,23 +39,18 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2GXWMnb1i19NpLxC5GnNM1mYVd1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "git-widget-placeholder": "feature/weather-api",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
