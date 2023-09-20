@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Result</title>
+</head>
+<body>
+    <h1>Best Weather</h1>
+    <div>
+        <p>
+            Today´s weather in
+            <span th:text="${weatherData.location}"></span>
+            is
+            <span th:text="${weatherData.weather.main.temp}"></span>
+            degree and
+            <span th:text="${weatherData.weather.weather[0].description}"></span>
+        </p>
+    </div>
+</body>
+</html>
+

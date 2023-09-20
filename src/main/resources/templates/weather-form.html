@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Form</title>
+</head>
+<body>
+  <h1>Find Today's Weather in: </h1>
+  <form th:action="@{'weather/'}" method="get">
+    <label for="location">Location</label>
+    <input type="text" placeholder="ex. london" id="location" th:name="location">
+    <button type="submit" value="submit">Give me the Weather</button>
+  </form>
+</body>
+</html>
