@@ -1,6 +1,8 @@
 package de.procceed.cloud.roadtocloudnative.controller;
 
+import de.procceed.cloud.roadtocloudnative.model.Weather;
 import de.procceed.cloud.roadtocloudnative.model.WeatherData;
+import de.procceed.cloud.roadtocloudnative.model.WeatherData2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
